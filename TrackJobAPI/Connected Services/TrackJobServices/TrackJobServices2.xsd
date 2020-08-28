@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.microsoft.com/dynamics/2008/01/documents/STMTrackJob" xmlns:st="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/dynamics/2008/01/documents/STMTrackJob" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://aosstd:8101/DynamicsAx/Services/TrackJobServices?xsd=xsd10" namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes" />
+  <xs:element name="STMTrackJob" type="tns:AxdSTMTrackJob" />
+  <xs:complexType name="AxdSTMTrackJob">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClearNilFieldsOnUpdate" nillable="true" type="st:AxdEnum_boolean" />
+      <xs:element minOccurs="0" name="DocPurpose" nillable="true" type="st:AxdEnum_XMLDocPurpose" />
+      <xs:element minOccurs="0" name="SenderId" nillable="true" type="st:AxdExtType_DataAreaId" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="STMTrackJobTable" type="tns:AxdEntity_STMTrackJobTable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AxdEntity_STMTrackJobTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_DocumentHash" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedDate" nillable="true" type="st:AxdExtType_TransDate" />
+      <xs:element minOccurs="0" name="FinishDate" nillable="true" type="st:AxdExtType_TransDate" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="st:AxdExtType_ProjName" />
+      <xs:element minOccurs="0" name="ProjAmount" nillable="true" type="st:AxdExtType_Amount" />
+      <xs:element minOccurs="0" name="ProjId" nillable="true" type="st:AxdExtType_ProjId" />
+      <xs:element minOccurs="0" name="ProjStage" nillable="true" type="st:AxdUnion_AxdType_Str_AxdType_ExtCodeValue" />
+      <xs:element minOccurs="0" name="RecId" nillable="true" type="st:AxdExtType_RecId" />
+      <xs:element minOccurs="0" name="RecVersion" nillable="true" type="st:AxdExtType_RecVersion" />
+      <xs:element minOccurs="0" name="RefTrackId" nillable="true" type="st:AxdUnion_AxdType_Str_AxdType_ExtCodeValue" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="st:AxdExtType_TransDate" />
+      <xs:element minOccurs="0" name="STMMBU" nillable="true" type="st:AxdEnum_STMMBU" />
+      <xs:element minOccurs="0" name="StmTrackId" nillable="true" type="st:AxdUnion_AxdType_Str_AxdType_ExtCodeValue" />
+      <xs:element minOccurs="0" name="STMTrackStatus" nillable="true" type="st:AxdEnum_STMTrackStatus" />
+      <xs:element minOccurs="0" name="STMTypeRoom" nillable="true" type="st:AxdEnum_STMTypeRoomJIS" />
+      <xs:element minOccurs="0" name="Unit" nillable="true" type="st:AxdExtType_Amount" />
+    </xs:sequence>
+    <xs:attribute fixed="entity" name="class" use="required" />
+    <xs:attribute name="action" type="st:AxdEnum_AxdEntityAction" />
+  </xs:complexType>
+</xs:schema>

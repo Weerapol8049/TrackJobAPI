@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://aosstd:8101/DynamicsAx/Services/TrackJobServices?xsd=xsd11" namespace="http://tempuri.org" />
+      <xsd:import schemaLocation="http://aosstd:8101/DynamicsAx/Services/TrackJobServices?xsd=xsd12" namespace="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" />
+      <xsd:import schemaLocation="http://aosstd:8101/DynamicsAx/Services/TrackJobServices?xsd=xsd14" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" />
+      <xsd:import schemaLocation="http://aosstd:8101/DynamicsAx/Services/TrackJobServices?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://aosstd:8101/DynamicsAx/Services/TrackJobServices?xsd=xsd1" namespace="http://schemas.microsoft.com/dynamics/2011/02/documents/DocumentPaging" />
+      <xsd:import schemaLocation="http://aosstd:8101/DynamicsAx/Services/TrackJobServices?xsd=xsd2" />
+      <xsd:import schemaLocation="http://aosstd:8101/DynamicsAx/Services/TrackJobServices?xsd=xsd3" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKeyList" />
+      <xsd:import schemaLocation="http://aosstd:8101/DynamicsAx/Services/TrackJobServices?xsd=xsd4" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey" />
+      <xsd:import schemaLocation="http://aosstd:8101/DynamicsAx/Services/TrackJobServices?xsd=xsd5" namespace="http://schemas.microsoft.com/dynamics/2011/02/documents/EntityKeyPage" />
+      <xsd:import schemaLocation="http://aosstd:8101/DynamicsAx/Services/TrackJobServices?xsd=xsd8" namespace="http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" />
+      <xsd:import schemaLocation="http://aosstd:8101/DynamicsAx/Services/TrackJobServices?xsd=xsd9" namespace="http://schemas.microsoft.com/dynamics/2008/01/documents/STMTrackJob" />
+      <xsd:import schemaLocation="http://aosstd:8101/DynamicsAx/Services/TrackJobServices?xsd=xsd10" namespace="http://schemas.microsoft.com/dynamics/2008/01/sharedtypes" />
+      <xsd:import schemaLocation="http://aosstd:8101/DynamicsAx/Services/TrackJobServices?xsd=xsd13" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://aosstd:8101/DynamicsAx/Services/TrackJobServices?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.Framework.Services" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="STMTrackJobServiceGetKeysRequest">
+    <wsdl:part name="parameters" element="tns:STMTrackJobServiceGetKeysRequest" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceGetKeysRequest_Headers">
+    <wsdl:part xmlns:q1="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q1:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceGetKeysResponse">
+    <wsdl:part name="parameters" element="tns:STMTrackJobServiceGetKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobService_getKeys_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q2:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceUpdateRequest">
+    <wsdl:part name="parameters" element="tns:STMTrackJobServiceUpdateRequest" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceUpdateRequest_Headers">
+    <wsdl:part xmlns:q3="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q3:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceUpdateResponse">
+    <wsdl:part name="parameters" element="tns:STMTrackJobServiceUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobService_update_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q4:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceFindRequest">
+    <wsdl:part name="parameters" element="tns:STMTrackJobServiceFindRequest" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceFindRequest_Headers">
+    <wsdl:part xmlns:q5="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q5:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceFindResponse">
+    <wsdl:part name="parameters" element="tns:STMTrackJobServiceFindResponse" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobService_find_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q6:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceDeleteRequest">
+    <wsdl:part name="parameters" element="tns:STMTrackJobServiceDeleteRequest" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceDeleteRequest_Headers">
+    <wsdl:part xmlns:q7="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q7:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceDeleteResponse">
+    <wsdl:part name="parameters" element="tns:STMTrackJobServiceDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobService_delete_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q8:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceCreateRequest">
+    <wsdl:part name="parameters" element="tns:STMTrackJobServiceCreateRequest" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceCreateRequest_Headers">
+    <wsdl:part xmlns:q9="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q9:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceCreateResponse">
+    <wsdl:part name="parameters" element="tns:STMTrackJobServiceCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobService_create_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q10:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceFindKeysRequest">
+    <wsdl:part name="parameters" element="tns:STMTrackJobServiceFindKeysRequest" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceFindKeysRequest_Headers">
+    <wsdl:part xmlns:q11="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q11:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceFindKeysResponse">
+    <wsdl:part name="parameters" element="tns:STMTrackJobServiceFindKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobService_findKeys_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q12:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceGetChangedKeysRequest">
+    <wsdl:part name="parameters" element="tns:STMTrackJobServiceGetChangedKeysRequest" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceGetChangedKeysRequest_Headers">
+    <wsdl:part xmlns:q13="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q13:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceGetChangedKeysResponse">
+    <wsdl:part name="parameters" element="tns:STMTrackJobServiceGetChangedKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobService_getChangedKeys_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q14:AifFault" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceReadRequest">
+    <wsdl:part name="parameters" element="tns:STMTrackJobServiceReadRequest" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceReadRequest_Headers">
+    <wsdl:part xmlns:q15="http://schemas.microsoft.com/dynamics/2010/01/datacontracts" name="context" element="q15:CallContext" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobServiceReadResponse">
+    <wsdl:part name="parameters" element="tns:STMTrackJobServiceReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="STMTrackJobService_read_AifFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.microsoft.com/dynamics/2008/01/documents/Fault" name="detail" element="q16:AifFault" />
+  </wsdl:message>
+  <wsdl:portType name="STMTrackJobService">
+    <wsdl:operation name="getKeys">
+      <wsdl:input wsaw:Action="http://tempuri.org/STMTrackJobService/getKeys" name="STMTrackJobServiceGetKeysRequest" message="tns:STMTrackJobServiceGetKeysRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/STMTrackJobService/getKeysResponse" name="STMTrackJobServiceGetKeysResponse" message="tns:STMTrackJobServiceGetKeysResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/STMTrackJobService/getKeysAifFaultFault" name="AifFaultFault" message="tns:STMTrackJobService_getKeys_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <wsdl:input wsaw:Action="http://tempuri.org/STMTrackJobService/update" name="STMTrackJobServiceUpdateRequest" message="tns:STMTrackJobServiceUpdateRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/STMTrackJobService/updateResponse" name="STMTrackJobServiceUpdateResponse" message="tns:STMTrackJobServiceUpdateResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/STMTrackJobService/updateAifFaultFault" name="AifFaultFault" message="tns:STMTrackJobService_update_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <wsdl:input wsaw:Action="http://tempuri.org/STMTrackJobService/find" name="STMTrackJobServiceFindRequest" message="tns:STMTrackJobServiceFindRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/STMTrackJobService/findResponse" name="STMTrackJobServiceFindResponse" message="tns:STMTrackJobServiceFindResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/STMTrackJobService/findAifFaultFault" name="AifFaultFault" message="tns:STMTrackJobService_find_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/STMTrackJobService/delete" name="STMTrackJobServiceDeleteRequest" message="tns:STMTrackJobServiceDeleteRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/STMTrackJobService/deleteResponse" name="STMTrackJobServiceDeleteResponse" message="tns:STMTrackJobServiceDeleteResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/STMTrackJobService/deleteAifFaultFault" name="AifFaultFault" message="tns:STMTrackJobService_delete_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="create">
+      <wsdl:input wsaw:Action="http://tempuri.org/STMTrackJobService/create" name="STMTrackJobServiceCreateRequest" message="tns:STMTrackJobServiceCreateRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/STMTrackJobService/createResponse" name="STMTrackJobServiceCreateResponse" message="tns:STMTrackJobServiceCreateResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/STMTrackJobService/createAifFaultFault" name="AifFaultFault" message="tns:STMTrackJobService_create_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findKeys">
+      <wsdl:input wsaw:Action="http://tempuri.org/STMTrackJobService/findKeys" name="STMTrackJobServiceFindKeysRequest" message="tns:STMTrackJobServiceFindKeysRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/STMTrackJobService/findKeysResponse" name="STMTrackJobServiceFindKeysResponse" message="tns:STMTrackJobServiceFindKeysResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/STMTrackJobService/findKeysAifFaultFault" name="AifFaultFault" message="tns:STMTrackJobService_findKeys_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getChangedKeys">
+      <wsdl:input wsaw:Action="http://tempuri.org/STMTrackJobService/getChangedKeys" name="STMTrackJobServiceGetChangedKeysRequest" message="tns:STMTrackJobServiceGetChangedKeysRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/STMTrackJobService/getChangedKeysResponse" name="STMTrackJobServiceGetChangedKeysResponse" message="tns:STMTrackJobServiceGetChangedKeysResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/STMTrackJobService/getChangedKeysAifFaultFault" name="AifFaultFault" message="tns:STMTrackJobService_getChangedKeys_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="read">
+      <wsdl:input wsaw:Action="http://tempuri.org/STMTrackJobService/read" name="STMTrackJobServiceReadRequest" message="tns:STMTrackJobServiceReadRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/STMTrackJobService/readResponse" name="STMTrackJobServiceReadResponse" message="tns:STMTrackJobServiceReadResponse" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/STMTrackJobService/readAifFaultFault" name="AifFaultFault" message="tns:STMTrackJobService_read_AifFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

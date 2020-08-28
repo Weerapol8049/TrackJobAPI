@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cc541652-bb66-419d-a7ee-ae7d0f138444" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://AOSSTD:8101/DynamicsAx/Services/TrackJobLineService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TrackJobLineService.xsd" MetadataType="Schema" ID="b3ddf4c3-97ff-4823-8d10-a3d3b4477451" SourceId="1" SourceUrl="http://aosstd:8101/DynamicsAx/Services/TrackJobLineService?xsd=xsd1" />
+    <MetadataFile FileName="TrackJobLineService1.xsd" MetadataType="Schema" ID="6f3a4810-4674-48ff-90bc-60bbb6b81ac6" SourceId="1" SourceUrl="http://aosstd:8101/DynamicsAx/Services/TrackJobLineService?xsd=xsd10" />
+    <MetadataFile FileName="TrackJobLineService2.xsd" MetadataType="Schema" ID="b2cdd2f3-914f-4db9-8a3e-09830c87ff83" SourceId="1" SourceUrl="http://aosstd:8101/DynamicsAx/Services/TrackJobLineService?xsd=xsd8" />
+    <MetadataFile FileName="TrackJobLineService3.xsd" MetadataType="Schema" ID="d07678a1-9575-41a1-8bee-d192bdd6e3f4" SourceId="1" SourceUrl="http://aosstd:8101/DynamicsAx/Services/TrackJobLineService?xsd=xsd6" />
+    <MetadataFile FileName="TrackJobLineService.wsdl" MetadataType="Wsdl" ID="73e2ef28-d7f9-4db8-86a2-e8721cb6b3a1" SourceId="1" SourceUrl="http://aosstd:8101/DynamicsAx/Services/TrackJobLineService?wsdl=wsdl0" />
+    <MetadataFile FileName="TrackJobLineService4.xsd" MetadataType="Schema" ID="4ca54237-4fc8-4201-9828-f15fd7c4d1f4" SourceId="1" SourceUrl="http://aosstd:8101/DynamicsAx/Services/TrackJobLineService?xsd=xsd4" />
+    <MetadataFile FileName="TrackJobLineService5.xsd" MetadataType="Schema" ID="cd4f0f77-559d-457f-895f-db939e8ff222" SourceId="1" SourceUrl="http://aosstd:8101/DynamicsAx/Services/TrackJobLineService?xsd=xsd2" />
+    <MetadataFile FileName="TrackJobLineService6.xsd" MetadataType="Schema" ID="f0dbecf8-747b-42b0-80de-282e46ba427a" SourceId="1" SourceUrl="http://aosstd:8101/DynamicsAx/Services/TrackJobLineService?xsd=xsd11" />
+    <MetadataFile FileName="TrackJobLineService7.xsd" MetadataType="Schema" ID="c79c3b6f-2d28-4ebd-ac71-651386ab3c7d" SourceId="1" SourceUrl="http://aosstd:8101/DynamicsAx/Services/TrackJobLineService?xsd=xsd0" />
+    <MetadataFile FileName="TrackJobLineService8.xsd" MetadataType="Schema" ID="37e18ba1-f805-434a-984e-da4f7a06a49e" SourceId="1" SourceUrl="http://aosstd:8101/DynamicsAx/Services/TrackJobLineService?xsd=xsd3" />
+    <MetadataFile FileName="TrackJobLineService9.xsd" MetadataType="Schema" ID="1c4a7606-8426-4812-87dc-b7fd0de94735" SourceId="1" SourceUrl="http://aosstd:8101/DynamicsAx/Services/TrackJobLineService?xsd=xsd9" />
+    <MetadataFile FileName="TrackJobLineService10.xsd" MetadataType="Schema" ID="f09e3e13-0eb6-41d6-946b-4cbf6c4eaa72" SourceId="1" SourceUrl="http://aosstd:8101/DynamicsAx/Services/TrackJobLineService?xsd=xsd7" />
+    <MetadataFile FileName="TrackJobLineService11.xsd" MetadataType="Schema" ID="8761cc60-2f94-49bd-a394-5f0698a3c8c5" SourceId="1" SourceUrl="http://aosstd:8101/DynamicsAx/Services/TrackJobLineService?xsd=xsd5" />
+    <MetadataFile FileName="TrackJobLineService1.wsdl" MetadataType="Wsdl" ID="ca85144a-05b0-4c1d-a1db-1194b85cb654" SourceId="1" SourceUrl="http://aosstd:8101/DynamicsAx/Services/TrackJobLineService" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
