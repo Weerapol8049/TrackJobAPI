@@ -16,42 +16,121 @@ namespace TrackJobAPI.Controllers
    
     public class TrackJobLineController : ApiController
     {
+        //[HttpGet]
+        //[Route("api/trackjobline/data")]
+        //public IHttpActionResult GetDataLine()
+        //{
+        //    List<TrackJobLine> trackJobList = new List<TrackJobLine>();
+        //    CultureInfo us = new CultureInfo("en-US");
+        //    try
+        //    {
+        //        DataSet dsTable = ExecuteStaticQuery.Get("STMTrackJob");
+        //        var data = (from a in dsTable.Tables[0].AsEnumerable()
+        //                    join b in dsTable.Tables[1].AsEnumerable()
+        //                        on a.Field<string>("StmTrackId") equals b.Field<string>("StmTrackId")
+        //                    where b.Field<DateTime>("ActEndDate").ToString("dd/MM/yyyy", us) == "01/01/1900"
+        //                    orderby b.Field<DateTime>("PlanStartDate"), a.Field<string>("ProjId"), b.Field<string>("UserId")
+        //                    select new TrackJobLine()
+        //                    {
+        //                        ProjId = a.Field<string>("ProjId").ToString(),
+        //                        ProjName = a.Field<string>("Name").ToString(),
+        //                        RecId = b.Field<Int64>("RecId").ToString(),
+        //                        ActStartDate = b.Field<DateTime>("ActStartDate"),
+        //                        ActEndDate = b.Field<DateTime>("ActEndDate"),
+        //                        Delay = b.Field<int>("Delay"),
+        //                        DelayPlan = b.Field<int>("DelayPlan"),
+        //                        OperName = b.Field<string>("OperName").ToString(),
+        //                        OperNo = b.Field<string>("OperNo").ToString(),
+        //                        PlanDays = b.Field<int>("PlanDays"),
+        //                        PlanEndDate = b.Field<DateTime>("PlanEndDate"),
+        //                        PlanStartDate = b.Field<DateTime>("PlanStartDate"),
+        //                        Remark = b.Field<string>("Remark").ToString(),
+        //                        SideDesign = b.Field<string>("SideDesign").ToString(),
+        //                        StmTrackId = b.Field<string>("StmTrackId").ToString(),
+        //                        TypeDesign = b.Field<string>("TypeDesign").ToString(),
+        //                        UserId = b.Field<string>("UserId").ToString(),
+        //                        UserName = b.Field<string>("UserName").ToString(),
+        //                    }).ToList();
+        //        return Json(data);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return Json(ex.Message);
+        //    }
+        //}
+
         [HttpGet]
-        [Route("api/trackjobline/data")]
-        public IHttpActionResult GetDataLine()
+        [Route("api/trackjobline/data/{username}/{password}")]
+        public IHttpActionResult GetDataLine(string username, string password)
         {
             List<TrackJobLine> trackJobList = new List<TrackJobLine>();
             CultureInfo us = new CultureInfo("en-US");
             try
             {
                 DataSet dsTable = ExecuteStaticQuery.Get("STMTrackJob");
-                var data = (from a in dsTable.Tables[0].AsEnumerable()
-                            join b in dsTable.Tables[1].AsEnumerable()
-                                on a.Field<string>("StmTrackId") equals b.Field<string>("StmTrackId")
-                            where b.Field<DateTime>("ActEndDate").ToString("dd/MM/yyyy", us) == "01/01/1900"
-                            orderby b.Field<DateTime>("PlanStartDate"), a.Field<string>("ProjId"), b.Field<string>("UserId")
-                            select new TrackJobLine()
-                            {
-                                ProjId = a.Field<string>("ProjId").ToString(),
-                                ProjName = a.Field<string>("Name").ToString(),
-                                RecId = b.Field<Int64>("RecId").ToString(),
-                                ActStartDate = b.Field<DateTime>("ActStartDate"),
-                                ActEndDate = b.Field<DateTime>("ActEndDate"),
-                                Delay = b.Field<int>("Delay"),
-                                DelayPlan = b.Field<int>("DelayPlan"),
-                                OperName = b.Field<string>("OperName").ToString(),
-                                OperNo = b.Field<string>("OperNo").ToString(),
-                                PlanDays = b.Field<int>("PlanDays"),
-                                PlanEndDate = b.Field<DateTime>("PlanEndDate"),
-                                PlanStartDate = b.Field<DateTime>("PlanStartDate"),
-                                Remark = b.Field<string>("Remark").ToString(),
-                                SideDesign = b.Field<string>("SideDesign").ToString(),
-                                StmTrackId = b.Field<string>("StmTrackId").ToString(),
-                                TypeDesign = b.Field<string>("TypeDesign").ToString(),
-                                UserId = b.Field<string>("UserId").ToString(),
-                                UserName = b.Field<string>("UserName").ToString(),
-                            }).ToList();
-                return Json(data);
+          
+                if (username == "admin" && password == "admin0001")
+                {
+                    trackJobList = (from a in dsTable.Tables[0].AsEnumerable()
+                                    join b in dsTable.Tables[1].AsEnumerable()
+                                        on a.Field<string>("StmTrackId") equals b.Field<string>("StmTrackId")
+                                    where b.Field<DateTime>("ActEndDate").ToString("dd/MM/yyyy", us) == "01/01/1900"
+                                    orderby b.Field<DateTime>("PlanStartDate"), a.Field<string>("ProjId"), b.Field<string>("UserId")
+                                    select new TrackJobLine()
+                                    {
+                                        ProjId = a.Field<string>("ProjId").ToString(),
+                                        ProjName = a.Field<string>("Name").ToString(),
+                                        RecId = b.Field<Int64>("RecId").ToString(),
+                                        ActStartDate = b.Field<DateTime>("ActStartDate"),
+                                        ActEndDate = b.Field<DateTime>("ActEndDate"),
+                                        Delay = b.Field<int>("Delay"),
+                                        DelayPlan = b.Field<int>("DelayPlan"),
+                                        OperName = b.Field<string>("OperName").ToString(),
+                                        OperNo = b.Field<string>("OperNo").ToString(),
+                                        PlanDays = b.Field<int>("PlanDays"),
+                                        PlanEndDate = b.Field<DateTime>("PlanEndDate"),
+                                        PlanStartDate = b.Field<DateTime>("PlanStartDate"),
+                                        Remark = b.Field<string>("Remark").ToString(),
+                                        SideDesign = b.Field<string>("SideDesign").ToString(),
+                                        StmTrackId = b.Field<string>("StmTrackId").ToString(),
+                                        TypeDesign = b.Field<string>("TypeDesign").ToString(),
+                                        UserId = b.Field<string>("UserId").ToString(),
+                                        UserName = b.Field<string>("UserName").ToString(),
+                                    }).ToList();
+                }
+                else
+                {
+                    trackJobList = (from a in dsTable.Tables[0].AsEnumerable()
+                                    join b in dsTable.Tables[1].AsEnumerable()
+                                        on a.Field<string>("StmTrackId") equals b.Field<string>("StmTrackId")
+                                    where b.Field<DateTime>("ActEndDate").ToString("dd/MM/yyyy", us) == "01/01/1900"
+                                         && b.Field<string>("UserId").ToString() == username
+                                    orderby b.Field<DateTime>("PlanStartDate"), a.Field<string>("ProjId"), b.Field<string>("UserId")
+                                    select new TrackJobLine()
+                                    {
+                                        ProjId = a.Field<string>("ProjId").ToString(),
+                                        ProjName = a.Field<string>("Name").ToString(),
+                                        RecId = b.Field<Int64>("RecId").ToString(),
+                                        ActStartDate = b.Field<DateTime>("ActStartDate"),
+                                        ActEndDate = b.Field<DateTime>("ActEndDate"),
+                                        Delay = b.Field<int>("Delay"),
+                                        DelayPlan = b.Field<int>("DelayPlan"),
+                                        OperName = b.Field<string>("OperName").ToString(),
+                                        OperNo = b.Field<string>("OperNo").ToString(),
+                                        PlanDays = b.Field<int>("PlanDays"),
+                                        PlanEndDate = b.Field<DateTime>("PlanEndDate"),
+                                        PlanStartDate = b.Field<DateTime>("PlanStartDate"),
+                                        Remark = b.Field<string>("Remark").ToString(),
+                                        SideDesign = b.Field<string>("SideDesign").ToString(),
+                                        StmTrackId = b.Field<string>("StmTrackId").ToString(),
+                                        TypeDesign = b.Field<string>("TypeDesign").ToString(),
+                                        UserId = b.Field<string>("UserId").ToString(),
+                                        UserName = b.Field<string>("UserName").ToString(),
+                                    }).ToList();
+                }
+
+                
+                return Json(trackJobList);
             }
             catch (Exception ex)
             {
@@ -59,7 +138,7 @@ namespace TrackJobAPI.Controllers
             }
         }
 
-        
+
         [HttpPost]
         [Route("api/trackjobline/Edit")]
         public void Edit(TrackJobLine element)

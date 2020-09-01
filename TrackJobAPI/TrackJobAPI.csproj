@@ -140,7 +140,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\TrackJobLoginController.cs" />
     <Compile Include="Controllers\TrackJobLineController.cs" />
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\TrackJobLine.cs" />
     <Compile Include="Models\TrackStatus.cs" />
     <Compile Include="Models\TypeRoom.cs" />
